@@ -21,7 +21,7 @@ export class UpdateUserPageComponent implements OnInit {
   CPF!: string;
 
   ngOnInit(): void {
-    this.usersService.getUsers()
+    this.usersService.getUsersForUpdate()
     .pipe(
       map(users => users.find(user => user.id === this.id)),
       tap(user => this.CPF = user!.cpf)
