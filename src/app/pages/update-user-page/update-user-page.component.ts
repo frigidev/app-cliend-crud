@@ -4,7 +4,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Users } from '../../model/users/users';
 import { UsersService } from '../../services/users/users.service';
-import { map, tap } from 'rxjs';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-update-user-page',
@@ -24,7 +24,7 @@ export class UpdateUserPageComponent implements OnInit {
     this.usersService.getUsersForUpdate()
     .pipe(
       map(users => users.find(user => user.id === this.id)),
-      tap(user => this.CPF = user!.cpf)
+      map(user => this.CPF = user!.cpf)
     ).subscribe(_ => this.formGroup.controls['cpf'].setValue(this.CPF))
   }
 
