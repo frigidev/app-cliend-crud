@@ -25,6 +25,14 @@ export class UsersService {
     );
   }
 
+  // GET Users without logging the operation
+  getUsersForUpdate(): Observable<Users[]> {
+    return this.http.get<Users[]>(URL)
+    .pipe(
+      catchError(this.handleError<Users[]>())
+    );
+  }
+
   // POST Users
   postUser(user: Users) {
     this.http.post(URL, user)
