@@ -1,0 +1,32 @@
+<div class="row list">
+    <div class="col-md-12 d-flex justify-content-center">
+        <mat-card>
+            <mat-card-content>
+                <h1>List of users</h1>
+                <p>Click on the button below to list all the users of the API</p>
+                <button class="read-button" mat-stroked-button color="primary" (click)="read()">Read</button>
+                <div *ngIf="readed" class="list-users">
+                    <div *ngFor="let user of users | async">
+                        <ul>
+                            <li>
+                                <p class="title">User</p> 
+                                <p>ID: {{user.id}}</p>
+                                <p>Name: {{user.name}}</p>
+                                <p>Email: {{user.email}}</p>
+                                <p>CPF: {{user.cpf}}</p>
+                            </li>
+                            <button mat-flat-button color="warn" 
+                             (click)="deleteUser(user)" id="delete-button">
+                                Delete
+                            </button>
+                            <button mat-flat-button
+                             (click)="updateUser(user)" id="update-button">
+                                Update
+                            </button>
+                        </ul>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

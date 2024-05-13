@@ -1,0 +1,42 @@
+form {
+    margin: 20px auto;
+}
+
+#id {
+    display: none;
+}
+
+button~p {
+    font-weight: 700;
+    color: red;
+    margin-top: 2px;
+}
+
+.text {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.button {
+    margin-left: 47px;
+}
+
+div button {
+    background-color: #000;
+}
+
+div button:hover span {
+    color: #000;
+}
+
+div button:active span {
+    color: #fff;
+}
+
+div button:hover {
+    background-color: #ccc;
+}
+
+.white {
+    color: #fff;
+}

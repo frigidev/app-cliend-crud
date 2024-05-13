@@ -1,0 +1,16 @@
+html, body { 
+    height: 100%;
+}
+
+body { 
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+    background-color: #ccc;
+}
+
+.main-container {
+    width: 100%;
+    min-width: 620px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

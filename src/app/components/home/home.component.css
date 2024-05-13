@@ -1,0 +1,22 @@
+.main-card {
+    width: 450px;
+}
+
+div button {
+    margin-right: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+div button:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+div button:active {
+    color: #fff;
+}
+
+h2 {
+    margin-top: 5px;
+}

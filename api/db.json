@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "GWupwaz5DYWDAKlaMZOxY6AfS2OnTwZfGeZ9jIrS2Q02NfHxyBbqbgawye4F",
+      "name": "Lucas",
+      "email": "luc@email.com",
+      "cpf": "45266381027"
+    },
+    {
+      "id": "bTWDRdllohTzlpj0czM8E7FRqo5K9ABeqQcuznW6GY0HF6h1wHt1ELk85fux",
+      "name": "Mary",
+      "email": "mary@test.com",
+      "cpf": "84241508057"
+    },
+    {
+      "id": "X1BhE6y2oyHf7sGsGc58BRi4Xwhy3BfWHBHNS9j71IYD4gK8X86E3ZFbUizS",
+      "name": "Joana",
+      "email": "joana333@email.com",
+      "cpf": "82309776076"
+    },
+    {
+      "id": "8qOb0aTTrHAljxHtT6xiuJXqTi5FYRUCNkHPpPLUPZjFhJem2EM8mABdyxAL",
+      "name": "Marcos",
+      "email": "marcos712@email.com",
+      "cpf": "25227793034"
+    }
+  ]
+}

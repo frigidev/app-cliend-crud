@@ -1,0 +1,18 @@
+<header>
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <span class="white">Pages</span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/home']">
+          Home
+        </button>
+        <button mat-menu-item [routerLink]="['/form']">
+          Create User
+        </button>
+        <button mat-menu-item [routerLink]="['/list']">
+          List Users
+        </button>
+      </mat-menu>
+    </div>
+  </header>
