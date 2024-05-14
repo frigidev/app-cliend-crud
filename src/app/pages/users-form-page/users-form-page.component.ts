@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { RandomString } from '../../services/random-string/random-string.service';
 import { Users } from '../../model/users/users';
 import { UsersService } from '../../services/users/users.service';
-import { validateCpf } from '../../validators';
+import { createValidateCpf } from '../../validators';
 
 @Component({
   selector: 'app-form',
@@ -30,7 +30,7 @@ export class UsersFormPageComponent {
     id: [this.id],
     name: ['', Validators.pattern(/^[A-Z][A-Za-z(\s)?]{3,30}$/)],
     email: ['', Validators.pattern(/^([\w].+)@([\w]{2,15}).([\w]{2,10})$/)],
-    cpf: ['', validateCpf()]
+    cpf: ['', Validators.compose([Validators.required, createValidateCpf()])]
   })
 
   save(){
