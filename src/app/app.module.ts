@@ -48,10 +48,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatInputModule,
     MatFormFieldModule,
     MatGridListModule,
-    MatListModule
+    MatListModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideNgxMask()
   ],
   bootstrap: [AppComponent]
 })
