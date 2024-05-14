@@ -29,7 +29,7 @@
                         <div>
                             <mat-form-field>
                                 <mat-label>Enter your CPF</mat-label>
-                                <input matInput formControlName="cpf">
+                                <input matInput formControlName="cpf" mask="000.000.000-00">
                                 <mat-error *ngIf="error('cpf', 'errorCpf')">
                                     {{errorMessageCPF}}
                                 </mat-error>
