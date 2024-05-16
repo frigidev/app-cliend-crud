@@ -2,12 +2,12 @@
     <div class="col-md-12 d-flex justify-content-center">
         <form [formGroup]="formGroup" (ngSubmit)="save()">
             <input id="id" type="text" formControlName="id">
-            <mat-card>
+            <mat-card class="card">
                 <mat-card-content>
                     <fieldset>
                         <legend class="text">Register an user</legend>
                         <div>
-                            <mat-form-field>
+                            <mat-form-field class="input">
                                 <mat-label>Enter your name</mat-label>
                                 <input matInput formControlName="name">
                                 <div *ngIf="error('name', 'pattern')">
@@ -18,7 +18,7 @@
                             </mat-form-field>
                         </div>
                         <div>
-                            <mat-form-field>
+                            <mat-form-field class="input">
                                 <mat-label>Enter your email</mat-label>
                                 <input matInput formControlName="email">
                                 <mat-error *ngIf="error('email', 'pattern')">
@@ -26,8 +26,26 @@
                                 </mat-error>
                             </mat-form-field>
                         </div>
+                            <div class="password-input">
+                                <mat-form-field>
+                                  <mat-label>Enter your password</mat-label>
+                                  <input matInput [type]="hide ? 'password' : 'text'"
+                                  formControlName="password">
+                                  <div>
+                                    <mat-error *ngIf="error('password', 'passwordStrength')">
+                                        {{errorMessagePassword}}
+                                    </mat-error>
+                                  </div>
+                                  <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>
+                                        {{hide ? 'visibility_off' : 'visibility'}}
+                                    </mat-icon>
+                                  </button>
+                                </mat-form-field>
+                            </div>
                         <div>
-                            <mat-form-field>
+                            <mat-form-field class="input">
                                 <mat-label>Enter your CPF</mat-label>
                                 <input matInput formControlName="cpf" mask="000.000.000-00">
                                 <mat-error *ngIf="error('cpf', 'errorCpf')">
