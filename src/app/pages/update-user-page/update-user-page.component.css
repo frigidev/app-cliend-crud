@@ -12,6 +12,7 @@ form {
 .text {
     font-weight: 900;
     font-size: 20px;
+    margin: 0 0 15px 0;
 }
 
 .button {
@@ -37,4 +38,21 @@ div button:hover {
 
 .white {
     color: #fff;
+}
+
+input.password-input::-webkit-outer-spin-button,
+input.password-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+input.password-input {
+    -moz-appearance: textfield;
+}
+
+.input {
+    width: 280px;
+}
+
+.button-visibility {
+    margin-left: 35%;
 }
