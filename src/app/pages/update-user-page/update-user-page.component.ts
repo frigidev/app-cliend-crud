@@ -14,9 +14,11 @@ import { map } from 'rxjs';
 
 export class UpdateUserPageComponent implements OnInit {
 
+  hide = true;
+
   errorMessageEmail = "Enter a valid email";
   errorMessageName = "Must begin with an uppercase letter, and it should contain only letters and between 4-30 characters";   
-  errorMessageCPF = "Enter a valid CPF";
+  errorMessagePassword = "Your password must contain 8 or more characters a lowercase letter, an uppercase letter, numbers and at least one symbol";
 
   CPF!: string;
 
@@ -41,6 +43,7 @@ export class UpdateUserPageComponent implements OnInit {
     id: [''],
     name: ['', Validators.pattern(/^[A-Z][A-Za-z(\s)?]{3,30}$/)],
     email: ['', Validators.pattern(/^([\w].+)@([\w]{2,15}).([\w]{2,10})$/)],
+    password: [''],
     cpf: ['']
   })
 
@@ -59,11 +62,12 @@ export class UpdateUserPageComponent implements OnInit {
       id: form.value.id!,
       name: form.value.name!,
       email: form.value.email!,
+      password: form.value.password!,
       cpf: form.value.cpf!
     }
   }
 
-  error(control: 'id' |  'name' | 'email', validator: string){
+  error(control: 'id' |  'name' | 'email' | 'password', validator: string){
     return this.formGroup.controls[control].getError(validator) ? true : false;
   }
 
