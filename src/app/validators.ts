@@ -1,7 +1,33 @@
-import { AbstractControl, ValidatorFn } from "@angular/forms";
+import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
 
-export function validateCpf(): ValidatorFn {
-    return (control: AbstractControl) => {
+export function createPasswordStrength(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+
+        const value = control.value;
+
+        if(!value){
+            return null;
+        }
+
+        const hasUpperCase = /[A-Z]+/.test(value);
+
+        const hasLowerCase = /[a-z]+/.test(value);
+
+        const hasNumber = /[0-9]+/.test(value);
+
+        const hasSymbol = /[@#$&-+*?!_]+/.test(value);
+
+        const range = /[\w@#$&-+*?!]{6,20}/.test(value);
+
+        const validationPassword = hasUpperCase && hasLowerCase && 
+        hasNumber && hasSymbol && range;
+
+        return !validationPassword ? {passwordStrength:true} : null;
+    }
+}
+
+export function createValidateCpf(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
 
         const valueCpf = control.value;
 
@@ -9,13 +35,13 @@ export function validateCpf(): ValidatorFn {
             return null;
         }
 
-        const isCpf = validationCpf(valueCpf);
+        const isCpf = validateCpf(valueCpf);
 
         return isCpf ? null : {errorCpf: true};
     }
 }
 
-function validationCpf(cpfStr: string): boolean {
+function validateCpf(cpfStr: string): boolean {
     //verify if it is 11 digits
     const cpf = /^[\d]{11}$/
 
