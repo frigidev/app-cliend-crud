@@ -21,7 +21,7 @@ import { UpdateUserPageComponent } from './pages/update-user-page/update-user-pa
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -46,6 +46,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     HttpClientModule,
     MatFormFieldModule,
+    MatInputModule,
     NgxMaskDirective,
     NgxMaskPipe,
     MatIconModule
