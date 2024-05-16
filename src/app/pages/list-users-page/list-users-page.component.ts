@@ -27,7 +27,10 @@ export class ListUsersPageComponent implements OnInit {
 
   read(){
     this.users
-    .subscribe((users => users.forEach(user => this.usersList.push(user))));
+    .subscribe((users => users.forEach(user => { 
+      this.usersList.push(user) 
+      user.password = ''
+    })));
     this.readed = true;
   }
 
