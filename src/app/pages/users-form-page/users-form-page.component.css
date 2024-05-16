@@ -15,10 +15,11 @@ button~p {
 .text {
     font-weight: 900;
     font-size: 20px;
+    margin: 0 0 15px 50px;
 }
 
 .button {
-    margin-left: 47px;
+    margin-left: 80px;
 }
 
 div button {
@@ -39,4 +40,21 @@ div button:hover {
 
 .white {
     color: #fff;
+}
+  
+input.password-input::-webkit-outer-spin-button,
+input.password-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+input.password-input {
+    -moz-appearance: textfield;
+}
+
+.input {
+    width: 248px;
+}
+
+.card { 
+    width: 300px;
 }
