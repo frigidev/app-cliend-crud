@@ -41,8 +41,8 @@ export class UpdateUserPageComponent implements OnInit {
 
   formGroup = this.formBuilder.group({
     id: [''],
-    name: ['', Validators.pattern(/^[A-Z][A-Za-z(\s)?]{3,30}$/)],
-    email: ['', Validators.pattern(/^([\w].+)@([\w]{2,15}).([\w]{2,10})$/)],
+    name: ['', Validators.compose([Validators.pattern(/^[A-Z][A-Za-z(\s)?]{3,30}$/), Validators.required])],
+    email: ['', Validators.compose([Validators.pattern(/^([\w].+)@([\w]{2,15}).([\w]{2,10})$/), Validators.required])],
     password: [''],
     cpf: ['']
   })
