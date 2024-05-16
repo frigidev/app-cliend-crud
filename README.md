@@ -86,7 +86,7 @@ Com isso, quando você fizer um `npm run start`, ambos localhosts que você conf
 
 # dependências utilizadas nessa aplicação
 
-**Alguns componentes do Angular Material para fazer o layout/view, Bootstrap, HttpClient para fazer requisições HTTP para a API, JSON Server fake API, npm-run-all, RxJS para trabalhar de forma assíncrona, formulário reativo e a biblioteca Ngx Mask para usar a máscara no campo de CPF.**
+**Alguns componentes do Angular Material para fazer o layout/view, Bootstrap, HttpClient para fazer requisições HTTP para a API, JSON Server fake API, npm-run-all, RxJS para trabalhar de forma assíncrona, formulário reativo e a biblioteca Ngx Mask para usar a máscara de CPF no campo de CPF.**
 
 # observação
 
