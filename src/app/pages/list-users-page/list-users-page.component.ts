@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { Users } from '../../model/users/users';
 import { UsersService } from '../../services/users/users.service';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-users-page',
@@ -16,14 +16,18 @@ export class ListUsersPageComponent implements OnInit {
   ){}
 
   ngOnInit(){
-    this.users = this.usersService.getUsers();
+    this.users = this.usersService.getUsers()
   }
 
-  users!: Observable<Users[]>
+  users!: Observable<Users[]>;
 
   readed: boolean = false;
 
+  usersList: Users[] = [];
+
   read(){
+    this.users
+    .subscribe((users => users.forEach(user => this.usersList.push(user))));
     this.readed = true;
   }
 
