@@ -6,13 +6,14 @@
                 <p>Click on the button below to list all the users of the API</p>
                 <button class="read-button" mat-stroked-button color="primary" (click)="read()">Read</button>
                 <div *ngIf="readed" class="list-users">
-                    <div *ngFor="let user of users | async">
+                    <div *ngFor="let user of usersList">
                         <ul>
                             <li>
                                 <p class="title">User</p> 
                                 <p>ID: {{user.id}}</p>
                                 <p>Name: {{user.name}}</p>
                                 <p>Email: {{user.email}}</p>
+                                <p>Password: {{user.password}}</p>
                                 <p>CPF: {{user.cpf}}</p>
                             </li>
                             <button mat-flat-button color="warn" 
