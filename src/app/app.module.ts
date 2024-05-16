@@ -15,13 +15,13 @@ import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListUsersPageComponent } from './pages/list-users-page/list-users-page.component';
-import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MessageLogComponent } from './components/message-log/message-log.component';
 import { UpdateUserPageComponent } from './pages/update-user-page/update-user-page.component';
-import { MatListModule } from '@angular/material/list';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -45,12 +45,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    MatInputModule,
     MatFormFieldModule,
-    MatGridListModule,
-    MatListModule,
     NgxMaskDirective,
-    NgxMaskPipe
+    NgxMaskPipe,
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync(),
