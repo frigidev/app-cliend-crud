@@ -13,7 +13,7 @@
                         <legend class="d-flex justify-content-center text">Update an user</legend>
                         <div class="d-flex justify-content-center">
                             <mat-form-field class="input">
-                                <mat-label>Enter your name</mat-label>
+                                <mat-label>Enter your new name</mat-label>
                                 <input matInput formControlName="name">
                                 <div *ngIf="error('name', 'pattern')">
                                     <mat-error>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <mat-form-field class="input">
-                                <mat-label>Enter your email</mat-label>
+                                <mat-label>Enter your new email</mat-label>
                                 <input matInput formControlName="email">
                                 <mat-error *ngIf="error('email', 'pattern')">
                                     {{errorMessageEmail}}
@@ -33,7 +33,7 @@
                         </div>
                         <div class="d-flex justify-content-center password-input">
                             <mat-form-field>
-                              <mat-label>Enter your password</mat-label>
+                              <mat-label>Enter your new password</mat-label>
                               <input matInput [type]="hide ? 'password' : 'text'"
                               formControlName="password">
                               <div>
