@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Users } from '../../model/users/users';
 import { UsersService } from '../../services/users/users.service';
 import { map } from 'rxjs';
+import { createPasswordStrength } from '../../validators';
 
 @Component({
   selector: 'app-update-user-page',
@@ -43,7 +44,7 @@ export class UpdateUserPageComponent implements OnInit {
     id: [''],
     name: ['', Validators.compose([Validators.pattern(/^[A-Z][A-Za-z(\s)?]{3,30}$/), Validators.required])],
     email: ['', Validators.compose([Validators.pattern(/^([\w].+)@([\w]{2,15}).([\w]{2,10})$/), Validators.required])],
-    password: [''],
+    password: ['', Validators.compose([createPasswordStrength(), Validators.required])],
     cpf: ['']
   })
 
