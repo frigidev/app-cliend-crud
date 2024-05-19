@@ -15,9 +15,9 @@ export function createPasswordStrength(): ValidatorFn {
 
         const hasNumber = /[0-9]+/.test(value);
 
-        const hasSymbol = /[@#$&-+*?!_]+/.test(value);
+        const hasSymbol = /[@#$&-+%*?!_]+/.test(value);
 
-        const range = /[\w@#$&-+*?!]{6,20}/.test(value);
+        const range = /[\w@#$&-+%*?!]{6,20}/.test(value);
 
         const validationPassword = hasUpperCase && hasLowerCase && 
         hasNumber && hasSymbol && range;
