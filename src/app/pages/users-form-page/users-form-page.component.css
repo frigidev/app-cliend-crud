@@ -2,10 +2,6 @@ form {
     margin: 20px auto;
 }
 
-#id {
-    display: none;
-}
-
 button~p {
     font-weight: 700;
     color: red;
