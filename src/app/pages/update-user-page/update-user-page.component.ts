@@ -24,6 +24,7 @@ export class UpdateUserPageComponent implements OnInit {
   CPF!: string;
 
   ngOnInit(): void {
+    this.id = this.activeRoute.snapshot.paramMap.get('id')!;
     this.usersService.getUsersForUpdate()
     .pipe(
       map(users => users.find(user => user.id === this.id)),
@@ -31,7 +32,7 @@ export class UpdateUserPageComponent implements OnInit {
     ).subscribe(_ => this.formGroup.controls['cpf'].setValue(this.CPF))
   }
 
-  id = this.activeRoute.snapshot.paramMap.get('id');
+  id:string='';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -41,7 +42,6 @@ export class UpdateUserPageComponent implements OnInit {
   ){}
 
   formGroup = this.formBuilder.group({
-    id: [''],
     name: ['', Validators.compose([Validators.pattern(/^[A-Z][A-Za-z(\s)?]{3,30}$/), Validators.required])],
     email: ['', Validators.compose([Validators.pattern(/^([\w].+)@([\w]{2,15}).([\w]{2,10})$/), Validators.required])],
     password: ['', Validators.compose([createPasswordStrength(), Validators.required])],
@@ -50,7 +50,7 @@ export class UpdateUserPageComponent implements OnInit {
 
   save(){
     if(this.formGroup.valid){
-      this.usersService.putUser(this.formToValue(this.formGroup), this.id!);
+      this.usersService.putUser(this.formToValue(this.formGroup), this.id);
       this.goBack();
     }else{
       const error = document.getElementById('invalidForm');
@@ -60,7 +60,6 @@ export class UpdateUserPageComponent implements OnInit {
 
   formToValue(form: typeof this.formGroup): Users {
     return {
-      id: form.value.id!,
       name: form.value.name!,
       email: form.value.email!,
       password: form.value.password!,
@@ -68,7 +67,7 @@ export class UpdateUserPageComponent implements OnInit {
     }
   }
 
-  error(control: 'id' |  'name' | 'email' | 'password', validator: string){
+  error(control: 'name' | 'email' | 'password', validator: string){
     return this.formGroup.controls[control].getError(validator) ? true : false;
   }
 
