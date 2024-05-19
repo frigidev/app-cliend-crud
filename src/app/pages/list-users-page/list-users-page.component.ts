@@ -23,14 +23,7 @@ export class ListUsersPageComponent implements OnInit {
 
   readed: boolean = false;
 
-  usersList: Users[] = [];
-
   read(){
-    this.users
-    .subscribe((users => users.forEach(user => { 
-      this.usersList.push(user) 
-      user.password = ''
-    })));
     this.readed = true;
   }
 
