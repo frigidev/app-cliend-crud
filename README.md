@@ -43,6 +43,10 @@ Like this, when you do a `npm run start`, both localhosts you setted (on the por
 # observation
 
 **The valid CPFs (Cadastro de Pessoas Físicas) submitted in the db.json by the POST form page were generated in the following link: "https://www.4devs.com.br/gerador_de_cpf".**
+
+# API consumption
+
+It's possible to consume the API in a tool like Postman or Insomnia, testing the http requisitions without a robust backend solution implemented.
 ##
 # PT/BR
 
@@ -91,3 +95,7 @@ Com isso, quando você fizer um `npm run start`, ambos localhosts que você conf
 # observação
 
 **Os CPFs válidos (Cadastro de Pessoas Físicas) submetidos no db.json pela página de POST do formulário foram gerados com o seguinte link: "https://www.4devs.com.br/gerador_de_cpf".**
+
+# consumo de API
+
+É possível consumir a API em uma ferramenta como Postman ou Insomnia, testando as requisições sem uma solução backend robusta implementada.
