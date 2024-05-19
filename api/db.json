@@ -1,32 +1,25 @@
 {
   "users": [
     {
-      "id": "1sK7sD8iYuLNIzAmocyl360ijlsp9Qcl9sLArf28STwLsBm6m2NXzRnxX37a",
-      "name": "Lucas",
-      "email": "luc@email.com",
-      "password": "1a@B#h",
-      "cpf": "45266381027"
-    },
-    {
-      "id": "Qe5h72BlWGDOHPJmOn4NIjjHpjftSy9Dkm3r3PRO803bqNmW0MDEfhpx6jZR",
-      "name": "Mary",
-      "email": "mary@test.com",
-      "password": "123Ab@h",
-      "cpf": "84241508057"
-    },
-    {
-      "id": "XuE20x3NRG2BRgXERZhRml3TP6emUyRpgPzkBozkmlyTR0Rl566bNz2sm4Uc",
+      "id": "8201",
       "name": "Joana",
-      "email": "joana333@email.com",
-      "password": "a@1bdsa@1dS",
-      "cpf": "82309776076"
+      "email": "joana@teste.com",
+      "password": "32#$Ar",
+      "cpf": "46594928007"
     },
     {
-      "id": "sTUCR2dpTnKpmrlGCQK0jPlejGL96xstE1S1bNHb8YPP74whuq75CKdbQddT",
-      "name": "Marcos",
-      "email": "marcos712@email.com",
-      "password": "a123Bh@g",
-      "cpf": "25227793034"
+      "id": "4df2",
+      "name": "Mary",
+      "email": "mary@teste.com",
+      "password": "Gh23$a",
+      "cpf": "52205597027"
+    },
+    {
+      "id": "0118",
+      "name": "Lucas",
+      "email": "lucas@teste.com",
+      "password": "#$aG23",
+      "cpf": "51336872063"
     }
   ]
 }
